@@ -1,5 +1,7 @@
 # Practice-Questions
 
+
+
 ## 1.) Is Symmetric Binary Tree
 https://leetcode.com/problems/symmetric-tree/
 
@@ -27,3 +29,11 @@ https://leetcode.com/submissions/detail/89356240/
 
 Move red (represented by 0's) to the left and blue (2's) to the right. Ones should be left over in the middle. After I identified a 0 or 2, I would go to the beginning of the red index, 
 and scan to the right until I found a non-red color. If we were still in range then we swap. Same thing for blue. Continue until we've reached the blue index.
+
+## 6.) Distinct Subsequences
+https://leetcode.com/problems/distinct-subsequences/
+
+This algorithm is too slow for leetcode, but it does work. I may revisit this problem later with a different approach.
+First I remove any characters in s that do not appear in t, and construct a third string d which is a unique sequence of characters representing the character index. the 0th index is represented by ascii
+'!' and so on. I then recursively remove elements from d one at a time to get every combination of d, stopping when my length is less than t or if I have already traversed the sequence of characters
+saved in a hashSet. If the length of d is == length of t, I reconstruct s from d by getting the indexes, and add it to a hashmap.
