@@ -1,7 +1,5 @@
 # Practice-Questions
 
-
-
 ## 1.) Is Symmetric Binary Tree
 https://leetcode.com/problems/symmetric-tree/
 
@@ -37,3 +35,8 @@ This algorithm is too slow for leetcode, but it does work. I may revisit this pr
 First I remove any characters in s that do not appear in t, and construct a third string d which is a unique sequence of characters representing the character index. the 0th index is represented by ascii
 '!' and so on. I then recursively remove elements from d one at a time to get every combination of d, stopping when my length is less than t or if I have already traversed the sequence of characters
 saved in a hashSet. If the length of d is == length of t, I reconstruct s from d by getting the indexes, and add it to a hashmap.
+
+## 7.) Sum Root to Leaf Nodes
+https://leetcode.com/problems/sum-root-to-leaf-numbers/
+
+This one ended up being quite simple. It's just a slightly modified recursive traversal algorithm.
