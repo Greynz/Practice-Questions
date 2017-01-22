@@ -40,3 +40,10 @@ saved in a hashSet. If the length of d is == length of t, I reconstruct s from d
 https://leetcode.com/problems/sum-root-to-leaf-numbers/
 
 This one ended up being quite simple. It's just a slightly modified recursive traversal algorithm.
+
+## 8.) Minimum Moves to Equal Array Elements
+https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
+
+I ended up implementing this and then redoing it completely with a better approach. Originally I just followed the prompt and added +1 to all but one of our max elements until the whole array was
+equal, and this worked fine. However we needed to recalculate max every time through my while loop, so it was quite costly. Then it dawned on me that adding 1 to all elements but one is
+the same as subtracting from only one element. Rather than go through a loop and calculate that out, we can just figure it out by the difference between the min element and the current one.
