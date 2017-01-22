@@ -47,3 +47,10 @@ https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
 I ended up implementing this and then redoing it completely with a better approach. Originally I just followed the prompt and added +1 to all but one of our max elements until the whole array was
 equal, and this worked fine. However we needed to recalculate max every time through my while loop, so it was quite costly. Then it dawned on me that adding 1 to all elements but one is
 the same as subtracting from only one element. Rather than go through a loop and calculate that out, we can just figure it out by the difference between the min element and the current one.
+
+## 9.) Is Subsequences
+https://leetcode.com/problems/is-subsequence/
+
+The initial question I found too easy (it was labelled Medium but I think it should be Easy), but was a simple loop through the large string while looking for a character from the subsequence string. After we find the first character, we continue through
+the loop checking against the second character, and so on. If we make it all the way through the subsequence, return true. For the follow up (what if we want to check 1billion+?) I calculate all subsequences and put them into a
+hashset. Then we just loop through each string and do return hs.contains(string);
