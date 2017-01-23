@@ -54,3 +54,14 @@ https://leetcode.com/problems/is-subsequence/
 The initial question I found too easy (it was labelled Medium but I think it should be Easy), but was a simple loop through the large string while looking for a character from the subsequence string. After we find the first character, we continue through
 the loop checking against the second character, and so on. If we make it all the way through the subsequence, return true. For the follow up (what if we want to check 1billion+?) I calculate all subsequences and put them into a
 hashset. Then we just loop through each string and do return hs.contains(string);
+
+## 10.) Contains Duplicate
+https://leetcode.com/problems/contains-duplicate/
+
+This question was essentially 'Do you know what a Hash-set is?'
+
+##11.) Number of Boomerangs
+https://leetcode.com/submissions/detail/90321088/
+
+The prompt confused me a bit at first, but it wasn't so bad. Basically we just count the number of distances and add them to a hashmap. After we get through a pass,
+find the number of combinations with distances of the same length (x*(x-1)).
