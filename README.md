@@ -65,3 +65,8 @@ https://leetcode.com/submissions/detail/90321088/
 
 The prompt confused me a bit at first, but it wasn't so bad. Basically we just count the number of distances and add them to a hashmap. After we get through a pass,
 find the number of combinations with distances of the same length (x*(x-1)).
+
+##12.) Non-Recursive Inorder Traversal
+
+Create a stack and point at the root of our tree. While we aren't pointing at something null, ad it to our stack and then move to the left node. After we hit something null, pop our stack, add it to our return list, and move
+our pointer to the right child. Repeat the whole process until the right child is also null.
