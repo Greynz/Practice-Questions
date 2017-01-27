@@ -1,5 +1,9 @@
 # Practice-Questions
 
+## Subsets
+I calculate the numbers of subsets by 2^n, and go through a for loop of that length. Then I use the bits in each number to act as a mask for each element in the array, so array [1,2,3]
+becomes [] at 000, [1] at 001, [2] at 010, [1,2] at 011 and so on.
+
 ## Is Symmetric Binary Tree
 https://leetcode.com/problems/symmetric-tree/
 
