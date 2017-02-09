@@ -2,11 +2,14 @@
 
 ## Construct Binary Tree
 https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+
 I put all my inorder values into a hashmap so I don't have to search through it for the middle value. I then recursively start splitting up my arrays into left and right subtrees based 
 on the middle value (always the end value of the postorder array), creating a new root node based on that middle value, and then set the left and right of that new node to the subtrees
 that were created.
 
 ## Subsets
+https://leetcode.com/problems/subsets/
+
 I calculate the numbers of subsets by 2^n, and go through a for loop of that length. Then I use the bits in each number to act as a mask for each element in the array, so array [1,2,3]
 becomes [] at 000, [1] at 001, [2] at 010, [1,2] at 011 and so on.
 
