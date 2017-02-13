@@ -18,6 +18,7 @@ public class NumberOfBoomerangs {
                 if (i==j)
                     continue;
                 int x = (int)(Math.pow((points[i][0] - points[j][0]), 2) + Math.pow((points[i][1] - points[j][1]), 2));
+                System.out.println(x + ", " + hm.getOrDefault(x,0));
                 hm.put(x, hm.getOrDefault(x, 0) + 1);
             }
             for (int d : hm.values()){

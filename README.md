@@ -1,5 +1,6 @@
 # Practice-Questions
 
+
 ## Construct Binary Tree
 https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 
@@ -89,3 +90,11 @@ find the number of combinations with distances of the same length (x*(x-1)).
 
 Create a stack and point at the root of our tree. While we aren't pointing at something null, ad it to our stack and then move to the left node. After we hit something null, pop our stack, add it to our return list, and move
 our pointer to the right child. Repeat the whole process until the right child is also null.
+
+## Perfect Rectangle
+https://leetcode.com/problems/perfect-rectangle/?tab=Description
+
+I didn't end up completing the question to leetcode's standards, but it does work for 95% of cases (memory exceeded in some instances). I determine the bottom left and top right corners of
+the rectangle, and also if there are negative values what offset I'll need (I'm using a boolean 2d array, so the minimum index must be 0). I then fill the table with 'true' for every small rectangle.
+If we add anything outside of our bottom left or top right bounds immediately return false. If a value is already true, it means we are overlapping so we return false here as well. We also keep
+a counter for the area, incrementing every time something is true. If at the end our total area == the counter, return true.

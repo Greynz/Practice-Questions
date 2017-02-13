@@ -4,15 +4,6 @@ import java.util.Queue;
 /**
  * Created by DrDan on 1/18/2017.
  */
- /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class IsSymmetric {
 
     public void test(){
@@ -32,8 +23,8 @@ public class IsSymmetric {
         m1.right = b2;
         m2.left = b3;
         m2.right = b4;
-        System.out.println(isSymmetric2(t));
-
+        System.out.println(isSymmetric(t));
+        System.out.println(isSymmetricIterative(t));
     }
 
     public boolean isSymmetric(TreeNode root) {
@@ -49,7 +40,7 @@ public class IsSymmetric {
         return true;
     }
 
-    public boolean isSymmetric2(TreeNode root){
+    public boolean isSymmetricIterative(TreeNode root){
         Queue<TreeNode> ql = new LinkedList<TreeNode>();
         Queue<TreeNode> qr = new LinkedList<TreeNode>();
 

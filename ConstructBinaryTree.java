@@ -7,9 +7,7 @@ import java.util.HashMap;
 public class ConstructBinaryTree {
 
     public void test(){
-
-        TreeNode r2 = buildTree2(new int[]{4,5,1,6,3,7}, new int[]{4,5,6,7,3,1});
-
+        //TreeNode r2 = buildTree2(new int[]{4,5,1,6,3,7}, new int[]{4,5,6,7,3,1});
         TreeNode r = buildTree(new int[]{4,5,1,6,3,7}, new int[]{4,5,6,7,3,1});
         preOrder(r);
 
@@ -23,7 +21,6 @@ public class ConstructBinaryTree {
     }
 
     public TreeNode buildTreeConstruct(int[] inorder, int[] postorder, int startI, int startP, int length, HashMap<Integer, Integer> hm){
-
         if (length < 1 || startI<0 || startP<0)
             return null;
 
@@ -38,9 +35,6 @@ public class ConstructBinaryTree {
     }
 
     public TreeNode buildTree2(int[] inorder, int[] postorder){
-
-
-
         if (postorder.length < 1)
             return null;
 

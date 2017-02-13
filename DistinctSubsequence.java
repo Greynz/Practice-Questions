@@ -26,7 +26,7 @@ public class DistinctSubsequence {
         }
         String sm = sb.toString();
 
-        HashMap<String, Integer> hm = new HashMap<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();
         HashSet<Integer> dp = new HashSet<>();
         String d = "";
         for (int i=0; i<sm.length(); i++)
@@ -35,7 +35,7 @@ public class DistinctSubsequence {
         return hm.containsKey(t) ? hm.get(t) : 0;
     }
 
-    public void numDistinctRecursive(String s, String d, String t, HashMap<String, Integer> hm, HashSet<Integer> dp){
+    public void numDistinctRecursive(String s, String d, String t, HashMap<Integer, Integer> hm, HashSet<Integer> dp){
         if (d.length() < t.length() || dp.contains(d.hashCode())) return;
         dp.add(d.hashCode());
         if (d.length() == t.length()) {
@@ -46,8 +46,8 @@ public class DistinctSubsequence {
             }
             String s2 = st.toString();
             if (hm.containsKey(s2))
-                hm.put(s2, hm.get(s2)+1);
-            else hm.put(s2, 1);
+                hm.put(s2.hashCode(), hm.get(s2)+1);
+            else hm.put(s2.hashCode(), 1);
         }
         for (int i=0; i<d.length(); i++){
             numDistinctRecursive(s, d.substring(0,i)+d.substring(i+1,d.length()), t, hm, dp);
